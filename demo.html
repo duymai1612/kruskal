@@ -12,47 +12,51 @@
     <body>
         <h2>Minimum Spanning Tree Weighted Graph using Kruskal</h2>
 
-        <label>
-            How many nodes?
-            <input id="nodes-num" type='number' />
-        </label>
-        <div></div>
-        <button id="create-btn">Create Graph</button>
 
-        <div style='height: 30px'></div>
-        <label>
-            Node
-            <input id="node-1" type='number' />
-        </label>
-        <div></div>
-        <label>
-            Node
-            <input id="node-2" type='number' />
-        </label>
-        <div></div>
-        <label>
-            Weight
-            <input id="weight" type='number' />
-        </label>
-        <div></div>
-        <button id="add-btn">Add</button>
+        <div id='create-wrapper'>
+            <label>
+                How many nodes?
+                <input id="nodes-num" type='number' />
+            </label>
+            <div></div>
+            <button id="create-btn">Create Graph</button>
+        </div>
 
-        <table class="table table-striped" style='width: 30%;'>
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Node 1</th>
-                    <th scope="col">Node 2</th>
-                    <th scope="col">Weight</th>
-                </tr>
-            </thead>
-            <tbody id='table-body'>
-            </tbody>
-        </table>
-        
-        <button id="submit">Submit</button>
-
-        <div id="mynetwork" style='width: 80vw'>
+        <div id='content-wrapper'style='display: none; justify-content: space-between;'>
+            <div id='settings'>
+                <label>
+                    Node
+                    <input id="node-1" type='number' />
+                </label>
+                <div></div>
+                <label>
+                    Node
+                    <input id="node-2" type='number' />
+                </label>
+                <div></div>
+                <label>
+                    Weight
+                    <input id="weight" type='number' />
+                </label>
+                <div></div>
+                <button id="add-btn">Add</button>
+    
+                <table class="table table-striped" style='width: 30vw;'>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Node 1</th>
+                            <th scope="col">Node 2</th>
+                            <th scope="col">Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody id='table-body'>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="mynetwork" style='width: 70vw'>
+            </div>
         </div>
         
         <script src='./demo.js' type="text/javascript"></script>
