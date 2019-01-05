@@ -1,4 +1,4 @@
-var edgeList = [];
+  var edgeList = [];
   const tbody = document.getElementById('table-body');
   const addBtn = document.getElementById('add-btn');
   const createBtn = document.getElementById('create-btn');
@@ -6,6 +6,7 @@ var edgeList = [];
   const node1 = document.getElementById('node-1');
   const node2 = document.getElementById('node-2');
   const weight = document.getElementById('weight');
+  const addNodeBtn = document.getElementById('add-node');
 
   const createWrapper = document.getElementById('create-wrapper');
   const contentWrapper = document.getElementById('content-wrapper');
@@ -114,6 +115,15 @@ var edgeList = [];
       contentWrapper.style.display = 'flex';
       updateGraph();
     });
+
+    addNodeBtn.addEventListener('click', () => {
+      nodeNum.value++;
+      g = new jsgraphs.WeightedGraph(nodeNum.value);
+      edgeList.forEach(edge => {
+        g.addEdge(new jsgraphs.Edge(edge.node1, edge.node2, edge.weight));
+      })
+      updateGraph();
+    })
 
     node1.addEventListener('keyup', (e) => {
       if (e.keyCode === 13) {
